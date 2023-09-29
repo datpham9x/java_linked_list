@@ -73,45 +73,44 @@ public class SinglyLinkedList {
 		Node currentList = null;
 		Node newList;
 
-		System.out.println(" 1. Add to Head: \n 2. Add to Tail: \n Chon chuc nang:");
+		
+		while (true) {
+			System.out.println(" 1. Add to Head: \n 2. Add to Tail: \n Chon chuc nang:");
 
-		int sw = sc.nextInt();
+			int sw = sc.nextInt();
+			switch (sw) {
 
-		switch (sw) {
-
-		case 1:
-
-			while (true) {
+			case 1:
 
 				System.out.println("Nhap phan tu moi vao dau list: ");
-				int node = sc.nextInt();
+				int nodeToHead = sc.nextInt();
 
-				newList = addToHead(currentList, node);
+				newList = addToHead(currentList, nodeToHead);
 
 				System.out.println("LinkedList sau khi them: ");
 				printList(newList);
 
 				currentList = newList;
+				
+				break;
 
-			}
-		case 2:
-
-			while (true) {
+			case 2:
 
 				System.out.println("Nhap phan tu moi vao cuoi list: ");
-				int node = sc.nextInt();
+				int nodeToTail = sc.nextInt();
 
-				newList = addToTail(currentList, node);
+				newList = addToTail(currentList, nodeToTail);
 
 				System.out.println("LinkedList sau khi them: ");
 				printList(newList);
 
 				currentList = newList;
+				
+				break;
 
 			}
 
 		}
-
 	}
 
 }
